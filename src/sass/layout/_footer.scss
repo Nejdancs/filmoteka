@@ -31,6 +31,21 @@
 //   100% {
 //     transform: scale(1);
 //   }
+// }
+
+@keyframes rotateY {
+  0% {
+    transform: perspective(400px) rotateY(0deg);
+  }
+
+  50% {
+    transform: perspective(400px) rotateY(180deg);
+  }
+
+  100% {
+    transform: perspective(400px) rotateY(360deg);
+  }
+}
 
 .footer {
   background-color: var(--secondaryLightThemeBgColor);
@@ -90,12 +105,8 @@
   }
 }
 
-.footer-image {
-  background-color: #ff6b08;
-  width: 14px;
-  height: 13px;
-  margin-right: 10px;
-  margin-left: 10px;
+.icon-heart {
+  animation: rotateY 2500ms infinite;
 }
 
 .footer-link {
